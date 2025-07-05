@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UMT88.Data;
@@ -42,9 +43,21 @@ namespace UMT88.Controllers
                 return View();
             }
 
-            // TODO: thiết lập session/cookie tại đây
+            // Lưu session để dùng phân quyền sau này
+            HttpContext.Session.SetInt32("UserId", (int)user.user_id);
+            HttpContext.Session.SetInt32("RoleId", user.role_id);
 
-            return RedirectToAction("Index", "Home");
+            // Redirect theo role
+            if (user.role_id == 1)
+            {
+                // Admin
+                return RedirectToAction("Index", "AdminDashboard");
+            }
+            else
+            {
+                // Bettor (người chơi) → User Dashboard
+                return RedirectToAction("Index", "UserDashboard");
+            }
         }
 
 
@@ -66,6 +79,7 @@ namespace UMT88.Controllers
                 ModelState.AddModelError("", "Vui lòng điền đầy đủ thông tin.");
                 return View();
             }
+
             // Mật khẩu phải ít nhất 6 ký tự
             if (password.Length < 6)
             {
@@ -92,6 +106,7 @@ namespace UMT88.Controllers
                 password_hash = password,  // TODO: hash trước khi lưu
                 balance = 0,
                 status = "active",
+                role_id = 2,         // Mặc định Bettor
                 created_at = DateTime.UtcNow,
                 updated_at = DateTime.UtcNow
             };
@@ -222,7 +237,8 @@ namespace UMT88.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
-            // TODO: SignOutAsync() nếu bạn dùng CookieAuth
+            // Xoá session
+            HttpContext.Session.Clear();
             return RedirectToAction("Login");
         }
     }

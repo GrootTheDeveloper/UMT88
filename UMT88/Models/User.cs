@@ -21,6 +21,8 @@ public partial class User
 
     public DateTime updated_at { get; set; }
 
+    public int role_id { get; set; }
+
     public virtual ICollection<Bet> Bets { get; set; } = new List<Bet>();
 
     public virtual ICollection<Deposit_Request> Deposit_Requests { get; set; } = new List<Deposit_Request>();

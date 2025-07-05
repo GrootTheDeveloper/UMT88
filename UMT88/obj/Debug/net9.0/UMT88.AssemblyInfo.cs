@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UMT88")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ac3aa6012ff0e3fb7a2af72b41f96cf2e6111bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b878cd4dd821f2af50abadc96a07a0c82aee17b")]
 [assembly: System.Reflection.AssemblyProductAttribute("UMT88")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UMT88")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

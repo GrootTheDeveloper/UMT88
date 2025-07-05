@@ -38,6 +38,8 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Promotion> Promotions { get; set; }
 
+    public virtual DbSet<Role> Roles { get; set; }
+
     public virtual DbSet<Season> Seasons { get; set; }
 
     public virtual DbSet<Selection> Selections { get; set; }
@@ -53,8 +55,6 @@ public partial class AppDbContext : DbContext
     public virtual DbSet<User_Promotion> User_Promotions { get; set; }
 
     public virtual DbSet<Withdraw_Request> Withdraw_Requests { get; set; }
-
-    public DbSet<PasswordReset> PasswordResets { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -275,6 +275,19 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.value).HasColumnType("decimal(12, 2)");
         });
 
+        modelBuilder.Entity<Role>(entity =>
+        {
+            entity.HasKey(e => e.role_id).HasName("PK__Role__760965CC6E4358F3");
+
+            entity.ToTable("Role");
+
+            entity.HasIndex(e => e.role_name, "UQ__Role__783254B1F71A87F2").IsUnique();
+
+            entity.Property(e => e.role_name)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<Season>(entity =>
         {
             entity.HasKey(e => e.season_id).HasName("PK__Season__0A99E3315F91C957");
@@ -390,6 +403,7 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.password_hash)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            entity.Property(e => e.role_id).HasDefaultValue(2);
             entity.Property(e => e.status)
                 .HasMaxLength(20)
                 .IsUnicode(false);
