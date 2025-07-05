@@ -15,6 +15,8 @@ public partial class Team
 
     public DateTime created_at { get; set; }
 
+    public string? image_url { get; set; }
+
     public virtual ICollection<League_Standing> League_Standings { get; set; } = new List<League_Standing>();
 
     public virtual ICollection<Match> Matchaway_teams { get; set; } = new List<Match>();

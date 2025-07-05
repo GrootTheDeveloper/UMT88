@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "_Layout";
+               <!-- hoặc null nếu bạn muốn trang trắng -->
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<!-- KHÔNG sửa gì trong phần HTML gốc của bạn – chỉ dán vào -->
+<div class="border-t-4 border-blue-500"></div>
+<main class="min-h-screen flex items-center justify-center px-4">
+    <form asp-action="Login" asp-controller="Auth" method="post" class="w-full max-w-sm">
+        @Html.AntiForgeryToken()
+
+        <div class="bg-gray-50 rounded-xl p-6 mb-6">
+            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center mb-2">
+                <i class="fas fa-sign-in-alt text-white text-sm"></i>
+            </div>
+            <h2 class="font-semibold text-gray-900 text-lg leading-6 mb-1">Đăng nhập</h2>
+            <p class="text-gray-400 text-sm leading-5">
+                Bắt đầu đăng nhập ngay để có thể theo dõi các trận đấu hấp dẫn!
+            </p>
+        </div>
+
+        <label for="email" class="block text-xs font-semibold text-gray-900 mb-1">Email</label>
+        <div class="relative mb-4">
+            <input id="email" name="email" type="email" placeholder="Nhập email của bạn"
+                   class="w-full pr-10 text-xs text-gray-400 placeholder-gray-400 bg-gray-50 rounded-md py-2 px-3
+                          focus:outline-none focus:ring-1 focus:ring-blue-600" />
+            <i class="fas fa-envelope absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+        </div>
+
+        <label for="password" class="block text-xs font-semibold text-gray-900 mb-1">Mật khẩu</label>
+        <div class="relative mb-6">
+            <input id="password" name="password" type="password" placeholder="Nhập mật khẩu của bạn"
+                   class="w-full pr-10 text-xs text-gray-400 placeholder-gray-400 bg-gray-50 rounded-md py-2 px-3
+                          focus:outline-none focus:ring-1 focus:ring-blue-600" />
+            <i class="fas fa-lock absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+        </div>
+
+        <button type="submit"
+                class="bg-blue-600 text-white text-xs font-semibold rounded-md py-2 px-4 mb-4
+                       hover:bg-blue-700 transition-colors w-full max-w-[120px]">
+            Đăng nhập
+        </button>
+
+        <div class="text-center text-blue-600 text-xs leading-5 space-y-1">
+            <a asp-controller="Auth"
+               asp-action="ForgotPassword"
+               class="block underline">
+                Quên mật khẩu?
+            </a>
+            <a asp-controller="Auth"
+               asp-action="Register"
+               class="block underline">
+                Tôi chưa có tài khoản. Hãy đưa tôi đến Tạo tài khoản.
+            </a>
+        </div>
+    </form>
+</main>

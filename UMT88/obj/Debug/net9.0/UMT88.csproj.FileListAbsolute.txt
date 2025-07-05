@@ -88,7 +88,6 @@ C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\staticwebasset
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.UMT88.props
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.UMT88.props
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\UMT88.dll
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\refint\UMT88.dll
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\UMT88.pdb
@@ -232,3 +231,4 @@ C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\UMT88.csproj.U
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\scopedcss\Views\Shared\_ViewStart.cshtml.rz.scp.css
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\compressed\67taupmyhd-p2acb2c6ie.gz
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\compressed\vh7zlemdj4-p2acb2c6ie.gz
+C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
