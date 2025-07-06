@@ -1,0 +1,39 @@
+﻿@model UMT88.ViewModels.AdminUserEditVm
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sửa người dùng";
+}
+
+<h2 class="text-xl font-bold mb-4">Chỉnh sửa #@Model.Id</h2>
+
+<form asp-action="Edit" method="post" class="space-y-4 max-w-md">
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id)
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Tên</label>
+        @Html.TextBoxFor(m => m.Name, new { @class = "w-full border rounded px-3 py-2 text-sm" })
+    </div>
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Email</label>
+        @Html.TextBoxFor(m => m.Email, new { @class = "w-full border rounded px-3 py-2 text-sm" })
+    </div>
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Trạng thái</label>
+        @Html.DropDownListFor(m => m.Status,
+                 new SelectList(new[] { "active", "suspended", "banned" }, Model.Status),
+                 new { @class = "w-full border rounded px-3 py-2 text-sm" })
+    </div>
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Role</label>
+        @Html.DropDownListFor(m => m.RoleId,
+                 new SelectList(new[] { new { Id = 1, Txt = "admin" }, new { Id = 2, Txt = "bettor" } }, "Id", "Txt", Model.RoleId),
+                 new { @class = "w-full border rounded px-3 py-2 text-sm" })
+    </div>
+
+    <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm">Lưu</button>
+    <a asp-action="Index" class="text-sm underline ml-4">Quay lại</a>
+</form>

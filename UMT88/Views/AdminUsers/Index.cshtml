@@ -1,0 +1,70 @@
+﻿@model List<UMT88.ViewModels.AdminUserRowVm>
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Quản lý người dùng";
+}
+
+<div class="max-w-7xl mx-auto">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 sm:mb-0">Quản lý người dùng</h2>
+        <a asp-action="Create"
+           class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 text-white text-sm font-semibold rounded-md shadow transition">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            Thêm tài khoản người dùng
+        </a>
+    </div>
+
+    @if (TempData["Toast"] != null)
+    {
+        <div class="bg-green-100 text-green-800 text-sm p-3 rounded mb-4">@TempData["Toast"]</div>
+    }
+
+    <div class="overflow-x-auto rounded-lg border border-gray-200 shadow-sm bg-white">
+        <table class="min-w-full divide-y divide-gray-200 text-sm">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700">ID</th>
+                    <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700">Tên</th>
+                    <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700">Email</th>
+                    <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700">Balance</th>
+                    <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700">Status</th>
+                    <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700">Role</th>
+                    <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700">Hành động</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+                @foreach (var u in Model)
+                {
+                    <tr>
+                        <td class="px-4 py-3 whitespace-nowrap text-gray-800">@u.Id</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-gray-800">@u.Name</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-gray-800">@u.Email</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-gray-800">@u.Balance.ToString("N0")</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-gray-800">@u.Status</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-gray-800">@u.RoleName</td>
+                        <td class="px-4 py-3 whitespace-nowrap space-x-3">
+                            <a asp-action="Edit" asp-route-id="@u.Id"
+                               class="text-blue-600 hover:underline font-medium">Sửa</a>
+                            <form asp-action="ToggleStatus" asp-route-id="@u.Id" method="post" class="inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="text-red-600 font-medium"
+                                        onclick="return confirm('Chắc chắn?');">
+                                    @(u.Status == "suspended" ? "Mở" : "Khóa")
+                                </button>
+                            </form>
+                            <form asp-action="ResetPwd" asp-route-id="@u.Id" method="post" class="inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="text-orange-600 hover:underline font-medium"
+                                        onclick="return confirm('Reset mật khẩu về 123456?');">
+                                    Reset PW
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

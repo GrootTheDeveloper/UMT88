@@ -1,0 +1,41 @@
+﻿@model UMT88.ViewModels.AdminUserCreateVm
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Thêm tài khoản";
+}
+
+<h2 class="text-xl font-bold mb-4">Thêm tài khoản người dùng</h2>
+
+<form asp-action="Create" method="post" class="space-y-4 max-w-md">
+    @Html.AntiForgeryToken()
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Tên</label>
+        @Html.TextBoxFor(m => m.Name, new { @class = "w-full border rounded px-3 py-2 text-sm", required = "required" })
+    </div>
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Email</label>
+        @Html.TextBoxFor(m => m.Email, new { @class = "w-full border rounded px-3 py-2 text-sm", type = "email", required = "required" })
+    </div>
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Mật khẩu tạm</label>
+        @Html.PasswordFor(m => m.Password, new { @class = "w-full border rounded px-3 py-2 text-sm", required = "required" })
+    </div>
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Role</label>
+        @Html.DropDownListFor(m => m.RoleId,
+                 new SelectList(new[] { new { Id = 1, Txt = "admin" }, new { Id = 2, Txt = "bettor" } }, "Id", "Txt"),
+                 new { @class = "w-full border rounded px-3 py-2 text-sm" })
+    </div>
+
+    <div>
+        <label class="block text-xs font-semibold mb-1">Balance (xu)</label>
+        @Html.TextBoxFor(m => m.InitBalance, new { @class = "w-full border rounded px-3 py-2 text-sm", type = "number", min = "0", step = "0.01" })
+    </div>
+
+    <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm">Tạo</button>
+    <a asp-action="Index" class="text-sm underline ml-4">Hủy</a>
+</form>
