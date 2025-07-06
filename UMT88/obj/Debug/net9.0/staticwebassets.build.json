@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tczgxn8pD9rPJUU1FY7S8ob0RoJ6LuPjK/hwSfmkZig=",
+  "Hash": "uO7ZOSC0SE6F9YI4T2SnuaSJmhK7i4z55HSHbW5XkBk=",
   "Source": "UMT88",
   "BasePath": "_content/UMT88",
   "Mode": "Default",
@@ -1443,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\images\\mock-qr.png",
+      "SourceId": "UMT88",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\",
+      "BasePath": "_content/UMT88",
+      "RelativePath": "images/mock-qr#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24z22951w8",
+      "Integrity": "vkuhhueXx92MjVAcmWBsdxhfgDvzBF2XeXiZaBfObUM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\mock-qr.png"
     },
     {
       "Identity": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\js\\site.js",
@@ -3320,6 +3341,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
+        }
+      ]
+    },
+    {
+      "Route": "images/mock-qr.24z22951w8.png",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\images\\mock-qr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18212"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vkuhhueXx92MjVAcmWBsdxhfgDvzBF2XeXiZaBfObUM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Jul 2025 15:03:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24z22951w8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/mock-qr.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vkuhhueXx92MjVAcmWBsdxhfgDvzBF2XeXiZaBfObUM="
+        }
+      ]
+    },
+    {
+      "Route": "images/mock-qr.png",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\images\\mock-qr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18212"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vkuhhueXx92MjVAcmWBsdxhfgDvzBF2XeXiZaBfObUM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Jul 2025 15:03:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vkuhhueXx92MjVAcmWBsdxhfgDvzBF2XeXiZaBfObUM="
         }
       ]
     },

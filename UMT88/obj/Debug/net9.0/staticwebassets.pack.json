@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\images\\mock-qr.png",
+      "PackagePath": "staticwebassets\\images\\mock-qr.png"
+    },
+    {
       "Id": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -62,6 +62,7 @@ C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\jquery-validation-u
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\jquery-validation\dist\additional-methods.js
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\mock-qr.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
