@@ -25,6 +25,10 @@ public partial class League_Standing
 
     public DateTime last_updated { get; set; }
 
+    public int goals_for { get; set; }
+
+    public int goals_against { get; set; }
+
     public virtual Season season { get; set; } = null!;
 
     public virtual Team team { get; set; } = null!;

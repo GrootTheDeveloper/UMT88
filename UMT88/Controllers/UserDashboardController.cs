@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using UMT88.Data;
 using UMT88.ViewModels;
 
@@ -10,70 +12,89 @@ namespace UMT88.Controllers
         private readonly AppDbContext _db;
         public UserDashboardController(AppDbContext db) => _db = db;
 
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
-            /* -------- 1. Lấy user hiện tại -------- */
-            var uid = HttpContext.Session.GetInt32("UserId");
-            if (uid == null) return RedirectToAction("Login", "Auth");
+            /* -------- User session -------- */
+            int? uid = HttpContext.Session.GetInt32("UserId");
 
-            var user = await _db.Users.FirstAsync(u => u.user_id == uid.Value);
+            if (uid == null)
+            {
+                return RedirectToAction("Login", "Auth"); // hoặc xử lý khác khi chưa đăng nhập
+            }
 
-            /* -------- 2. Lấy các trận (live hoặc scheduled) -------- */
-            var baseQuery = _db.Matches
-                .Include(m => m.season).ThenInclude(s => s.competition)
+            long userId = Convert.ToInt64(uid.Value);
+
+            var user = await _db.Users.FindAsync(userId);
+
+            /* -------- Featured (3 trận) -------- */
+            var featured = await _db.Matches
                 .Include(m => m.home_team)
                 .Include(m => m.away_team)
                 .Include(m => m.Match_Results)
-                .Where(m => m.status == "live" || m.status == "scheduled");
-
-            /* 3 trận nổi bật ngẫu nhiên */
-            var featured = await baseQuery
-                .OrderBy(r => Guid.NewGuid())
+                .Where(m => m.status == "live" || m.status == "scheduled")
+                .OrderBy(m => m.start_time)
                 .Take(3)
-                .Select(m => new MatchVm
+                .Select(m => new LiveVm
+                {
+                    match_id = m.match_id,
+                    home_name = m.home_team.name,
+                    away_name = m.away_team.name,
+                    home_score = m.Match_Results
+                                   .OrderByDescending(r => r.created_at)
+                                   .Select(r => (int?)r.home_score).FirstOrDefault(),
+                    away_score = m.Match_Results
+                                   .OrderByDescending(r => r.created_at)
+                                   .Select(r => (int?)r.away_score).FirstOrDefault(),
+                    status = m.status,
+                    home_logo = m.home_team.image_url,
+                    away_logo = m.away_team.image_url
+                })
+                .ToListAsync();
+
+            /* -------- Others = Market AH -------- */
+            /* trận scheduled bất kỳ trong 24h */
+            var matchesScheduled = await _db.Matches
+                .Include(m => m.home_team)
+                .Include(m => m.away_team)
+                .Include(m => m.season).ThenInclude(s => s.competition)
+                .Where(m => m.status == "scheduled" &&
+                            m.start_time <= DateTime.UtcNow.AddHours(24))
+                .ToListAsync();
+
+            /* map thành MatchCardVm – cố gắng tìm Market AH (nếu có) */
+            var others = matchesScheduled.Select(m =>
+            {
+                var ahMarket = _db.Markets
+                    .Include(mk => mk.Selections)
+                    .Include(mk => mk.market_type)
+                    .FirstOrDefault(mk => mk.match_id == m.match_id &&
+                                          mk.market_type.code == "AH");
+
+                decimal h = 0m;
+                if (ahMarket != null && ahMarket.Selections.Any())
+                {
+                    var raw = ahMarket.Selections.First().name.Split(' ').Last()
+                                                              .Replace("+", "")
+                                                              .Replace(",", ".");
+                    decimal.TryParse(raw, System.Globalization.NumberStyles.Any,
+                                     System.Globalization.CultureInfo.InvariantCulture, out h);
+                }
+
+                return new MatchCardVm
                 {
                     match_id = m.match_id,
                     competition = m.season.competition.name,
                     home_name = m.home_team.name,
                     away_name = m.away_team.name,
-                    home_logo = m.home_team.image_url,
-                    away_logo = m.away_team.image_url,
-                    home_score = m.Match_Results
-                                   .OrderByDescending(r => r.created_at)
-                                   .Select(r => (int?)r.home_score)
-                                   .FirstOrDefault(),
-                    away_score = m.Match_Results
-                                   .OrderByDescending(r => r.created_at)
-                                   .Select(r => (int?)r.away_score)
-                                   .FirstOrDefault(),
-                    status = m.status
-                })
-                .ToListAsync();
+                    handicap_h = h         // sẽ là 0 nếu chưa sinh kèo
+                };
+            })
+            .OrderBy(m => m.match_id)
+            .ToList();
 
-            /* Phần còn lại */
-            var others = await baseQuery
-                .OrderBy(m => m.match_id)
-                .Select(m => new MatchVm
-                {
-                    match_id = m.match_id,
-                    competition = m.season.competition.name,
-                    home_name = m.home_team.name,
-                    away_name = m.away_team.name,
-                    home_logo = m.home_team.image_url,
-                    away_logo = m.away_team.image_url,
-                    home_score = m.Match_Results
-                                   .OrderByDescending(r => r.created_at)
-                                   .Select(r => (int?)r.home_score)
-                                   .FirstOrDefault(),
-                    away_score = m.Match_Results
-                                   .OrderByDescending(r => r.created_at)
-                                   .Select(r => (int?)r.away_score)
-                                   .FirstOrDefault(),
-                    status = m.status
-                })
-                .ToListAsync();
 
-            /* -------- 3. Build ViewModel -------- */
+            /* -------- ViewModel -------- */
             var vm = new DashboardVm
             {
                 user_name = user.name,
@@ -81,7 +102,6 @@ namespace UMT88.Controllers
                 featured = featured,
                 others = others
             };
-
             return View(vm);
         }
     }

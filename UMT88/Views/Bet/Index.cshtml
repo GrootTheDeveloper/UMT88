@@ -1,0 +1,40 @@
+﻿@model UMT88.ViewModels.MatchDetailVm
+@{
+    Layout = "_UserLayout";
+    ViewData["Title"] = "Cá cược";
+}
+
+<main class="max-w-4xl mx-auto px-4 py-6">
+    <h2 class="text-xl font-semibold mb-4">
+        @Model.home_name vs @Model.away_name
+        <span class="text-sm text-gray-500">(@Model.start_time)</span>
+    </h2>
+
+    @if (!Model.markets.Any())
+    {
+        <p class="italic text-gray-500">Kèo đang được cập nhật…</p>
+    }
+    else
+    {
+        @foreach (var mk in Model.markets)
+        {
+            <div class="mb-6">
+                <h3 class="text-blue-600 font-semibold mb-2">@mk.market_type</h3>
+                <table class="w-full text-sm">
+                    <thead class="text-left text-gray-500">
+                        <tr><th>Cửa</th><th class="text-right">Odds</th></tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var (sel, odds) in mk.items)
+                        {
+                            <tr class="border-b">
+                                <td class="py-2">@sel.name</td>
+                                <td class="py-2 text-right">@odds.odds_value</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+</main>

@@ -18,6 +18,9 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromMinutes(30);
 });
 
+// Handicap
+builder.Services.AddHostedService<HandicapJob>();
+
 // 4. Thêm controller & view
 builder.Services.AddControllersWithViews();
 
@@ -28,6 +31,10 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+app.MapControllerRoute(
+    name: "bet",
+    pattern: "Bet/{action=Index}/{matchId?}",
+    defaults: new { controller = "Bet" });
 
 app.UseStaticFiles();
 app.UseRouting();
