@@ -27,11 +27,11 @@ Người dùng có thể:
 
 | Họ tên                 | Vai trò                         |
 |------------------------|----------------------------------|
-| **Đặng Phúc An Khang** | Leader – Quản lý dự án, Database, Backend | 
+| **Đặng Phúc An Khang** | Leader – Quản lý dự án, Database, Backend, Frontend | 
 | Nguyễn Lương Nghĩa     | UI/UX Designer, Frontend |
-| Trần Lê Gia Huy        | Documentation - UML & báo cáo |
-| Ngô Hoàng Tùng         | Database, Backend |
-| Vũ Văn Đạt             | FrontEnd |
+| Trần Lê Gia Huy        | Documentation |
+| Ngô Hoàng Tùng         | Documentation, Frontend |
+| Vũ Văn Đạt             | Documentation|
 
 ---
 
