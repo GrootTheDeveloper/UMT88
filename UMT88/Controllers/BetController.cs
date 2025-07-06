@@ -56,7 +56,7 @@ namespace UMT88.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> PlaceBet(long selectionId, decimal stake)
         {
-            int uid = HttpContext.Session.GetInt32("UserId") ?? 0;
+            long uid = HttpContext.Session.GetInt32("UserId") ?? 0;
             if (uid == 0) return Unauthorized();
             if (stake <= 0) return BadRequest("Số tiền cược không hợp lệ.");
 

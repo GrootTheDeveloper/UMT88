@@ -1,0 +1,190 @@
+﻿@model UMT88.ViewModels.AccountOverviewVm
+@{
+    Layout = "_UserLayout";
+    ViewData["Title"] = "Tài khoản";
+}
+
+<div class="max-w-5xl mx-auto px-6 py-8">
+    <p class="text-xs text-gray-700 mb-2">Tài khoản</p>
+    <h2 class="text-xl font-extrabold text-[#1a2a7a] mb-8">Tổng quan tài khoản</h2>
+
+    <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+        <!-- LEFT CARD -->
+        <div class="bg-[#f9f9f9] rounded-xl p-6 w-full max-w-md shadow-md">
+            <div class="flex items-center space-x-3 mb-5">
+                <img src="https://source.boringavatars.com/beam/80/@Model.UserName?colors=264653,2a9d8f,e9c46a,f4a261,e76f51"
+                     class="w-9 h-9 rounded-full" alt="avatar" />
+                <p class="text-[#5a5ea6] font-semibold">@Model.UserName</p>
+            </div>
+
+            <div class="text-xs text-gray-500 mb-5 space-y-1">
+                <div><strong>Email:</strong> @Model.Email</div>
+                <div><strong>Ngày đăng ký:</strong> @Model.CreatedAt.ToString("dd/MM HH:mm")</div>
+            </div>
+
+            <p class="font-extrabold mb-1">Số dư tài khoản</p>
+            <p class="text-xs text-gray-400 mb-5">@Model.Balance.ToString("N0") xu UMT</p>
+
+            <div class="flex space-x-4 mb-7">
+                <button id="withdrawBtn" class="bg-[#2a4bff] text-white text-xs font-semibold px-5 py-2 rounded flex items-center space-x-2">
+                    <i class="fas fa-wallet text-sm"></i><span>Rút ngay</span>
+                </button>
+                <button id="historyBtn" class="bg-[#4ade80] text-white text-xs font-semibold px-5 py-2 rounded flex items-center space-x-2">
+                    <i class="fas fa-history text-sm"></i><span>Lịch sử cược</span>
+                </button>
+            </div>
+
+            <form asp-action="ChangeName" method="post" class="flex items-center space-x-2 text-xs">
+                @Html.AntiForgeryToken()
+                <input name="newName" required maxlength="50"
+                       class="border px-2 py-1 rounded w-36" placeholder="Đổi tên…" />
+                <button class="underline text-blue-600">Lưu</button>
+            </form>
+
+            <form asp-controller="Auth" asp-action="Logout" method="post" class="mt-4">
+                @Html.AntiForgeryToken()
+                <button class="text-red-600 font-semibold underline text-sm">Đăng xuất</button>
+            </form>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="bg-[#f9f9f9] rounded-xl p-6 flex-1 text-gray-500 text-sm leading-relaxed shadow-md">
+            <p class="font-extrabold text-black mb-4">Những điều cần biết về xu UMT</p>
+            <p class="mb-4">Xu UMT sẽ được quy đổi sang đơn vị tiền tệ là VNĐ. Lý do là vì trang web này được chúng tôi tạo ra để phục vụ cho người Việt và dành riêng cho người Việt.</p>
+            <p class="mb-4">Mỗi 10.000 VNĐ = 1 xu UMT và cứ thế tính lên là sẽ ra số tiền bạn sẽ rút ra được.</p>
+            <p>Những tài khoản nào có vi phạm về các quy định của chúng tôi sẽ bị ban vĩnh viễn và mất toàn bộ số Xu UMT trong tài khoản.</p>
+        </div>
+    </div>
+
+    <!-- THỐNG KÊ THÁNG -->
+    <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-8 sm:space-y-0 mt-14 max-w-4xl mx-auto">
+        <div class="bg-[#f9f9f9] rounded-xl p-6 flex-1 min-w-[280px] shadow-md">
+            <h3 class="text-2xl font-extrabold mb-3 flex items-center space-x-3">@Model.MonthDeposit.ToString("N0") xu UMT</h3>
+            <p class="text-green-700 font-semibold text-sm">Xu nạp trong tháng</p>
+        </div>
+        <div class="bg-[#f9f9f9] rounded-xl p-6 flex-1 min-w-[280px] shadow-md">
+            <h3 class="text-2xl font-extrabold mb-3 flex items-center space-x-3">@Model.MonthSpend.ToString("N0") xu UMT</h3>
+            <p class="text-red-600 font-semibold text-sm">Xu tiêu trong tháng</p>
+        </div>
+    </div>
+</div>
+
+<!-- ======= MODAL: WITHDRAW ======= -->
+<div id="wdModal" class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg p-6 w-full max-w-sm relative">
+        <h3 class="font-semibold mb-3">Yêu cầu rút tiền</h3>
+        <form asp-action="Withdraw" method="post" class="space-y-3 text-sm">
+            @Html.AntiForgeryToken()
+
+            <div>
+                <label class="block mb-1 text-xs font-semibold">Tên ngân hàng</label>
+                <input type="text" name="bankName" maxlength="60"
+                       class="w-full border px-3 py-2 rounded" placeholder="VD: MB Bank"
+                       required />
+            </div>
+
+            <div>
+                <label class="block mb-1 text-xs font-semibold">Số tài khoản</label>
+                <input type="text" name="accountNumber" maxlength="30"
+                       pattern="\d{4,}"
+                       class="w-full border px-3 py-2 rounded"
+                       placeholder="Chỉ nhập số" required />
+            </div>
+
+            <div>
+                <label class="block mb-1 text-xs font-semibold">Số xu muốn rút</label>
+                <input type="number" name="amount" min="1" max="@Model.Balance"
+                       class="w-full border px-3 py-2 rounded" required />
+            </div>
+
+            <div class="flex justify-end space-x-2 pt-2">
+                <button type="button" class="btnCancel">Hủy</button>
+                <button class="px-4 py-1 bg-blue-600 text-white rounded">Gửi yêu cầu</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- ======= MODAL: BET HISTORY ======= 
+<div id="hisModal" class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg p-6 w-full max-w-xl relative">
+        <h3 class="font-semibold mb-4">Lịch sử cược</h3>
+        <table class="w-full text-xs">
+            <thead class="text-gray-500">
+                <tr><th>Mã</th><th>Thời gian</th><th>Cửa</th><th>Stake</th><th>KQ</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var b in Model.RecentBets)
+                {
+                    <tr class="border-t">
+                        <td class="py-1">#@b.BetId</td>
+                        <td>@b.PlacedAt.ToString("dd/MM HH:mm")</td>
+                        <td>@b.Selection</td>
+                        <td>@b.Stake.ToString("N0")</td>
+                        <td class="@(b.Status=="won"?"text-green-600":b.Status=="lost"?"text-red-600":"")">
+                            @b.Status
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="flex justify-end pt-3">
+            <button class="btnCancel px-4 py-1 bg-blue-600 text-white rounded">Đóng</button>
+        </div>
+    </div>
+</div>
+-->
+@section Scripts {
+    <script>
+        /* ========== MODAL LỊCH SỬ CƯỢC ========== */
+        const hisModal = document.createElement('div');
+        hisModal.className = "fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center";
+        hisModal.innerHTML = `
+          <div class="bg-white max-w-3xl w-full rounded-lg p-6 shadow-lg">
+              <h2 class="text-lg font-semibold mb-4">Lịch sử cược</h2>
+              <nav class="flex space-x-6 text-sm font-medium mb-6 border-b border-gray-300">
+                  <button data-filter="all"     class="tab active">Tất cả</button>
+                  <button data-filter="settled" class="tab">Đã lên kèo</button>
+                  <button data-filter="pending" class="tab">Chưa lên kèo</button>
+              </nav>
+              <div id="hisBody" class="overflow-y-auto max-h-[70vh] text-sm text-gray-700"></div>
+              <div class="text-right mt-4">
+                  <button id="hisClose" class="px-4 py-1 text-xs bg-gray-200 rounded">Đóng</button>
+              </div>
+          </div>`;
+        document.body.appendChild(hisModal);
+
+
+        document.getElementById('historyBtn').onclick = () => loadHistory("all");
+
+        hisModal.querySelector('#hisClose').onclick = () => hisModal.classList.add('hidden');
+        hisModal.querySelectorAll('.tab').forEach(btn => {
+            btn.onclick = () => loadHistory(btn.dataset.filter);
+        });
+
+        async function loadHistory(filter) {
+            const res = await fetch(`/Account/BetHistory?filter=${filter}`);
+            if (!res.ok) { alert("Không thể tải lịch sử"); return; }
+            const html = await res.text();
+            hisModal.querySelector('#hisBody').innerHTML = html;
+            hisModal.classList.remove('hidden');
+            hisModal.querySelectorAll('.tab').forEach(t => t.classList.remove('border-b-2', 'border-black'));
+            hisModal.querySelector(`.tab[data-filter="${filter}"]`).classList.add('border-b-2', 'border-black');
+        }
+
+        /* MODAL RÚT TIỀN Giữ nguyên */
+        const wdModal  = document.getElementById('wdModal');
+        document.getElementById('withdrawBtn').onclick = ()=> wdModal.classList.remove('hidden');
+        document.querySelectorAll('.btnCancel').forEach(btn=>btn.onclick = ()=>
+            btn.closest('.fixed').classList.add('hidden')
+        );
+
+        /* Toast từ TempData */
+        @if (TempData["Toast"] != null)
+        {
+            <text>alert(@Html.Raw(Json.Serialize(TempData["Toast"])));</text>
+        }
+    </script>
+}
+
