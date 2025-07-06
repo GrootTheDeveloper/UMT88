@@ -21,6 +21,8 @@ public partial class Match
 
     public virtual ICollection<Market> Markets { get; set; } = new List<Market>();
 
+    public virtual ICollection<MatchEvent> MatchEvents { get; set; } = new List<MatchEvent>();
+
     public virtual ICollection<Match_Result> Match_Results { get; set; } = new List<Match_Result>();
 
     public virtual Team away_team { get; set; } = null!;

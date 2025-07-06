@@ -19,6 +19,8 @@ public partial class Team
 
     public virtual ICollection<League_Standing> League_Standings { get; set; } = new List<League_Standing>();
 
+    public virtual ICollection<MatchEvent> MatchEvents { get; set; } = new List<MatchEvent>();
+
     public virtual ICollection<Match> Matchaway_teams { get; set; } = new List<Match>();
 
     public virtual ICollection<Match> Matchhome_teams { get; set; } = new List<Match>();

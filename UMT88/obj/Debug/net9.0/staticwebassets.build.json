@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/0oZiwydE8ErATrLeTte4WfK8SqzboVtpjhhzRhJ+30=",
+  "Hash": "tczgxn8pD9rPJUU1FY7S8ob0RoJ6LuPjK/hwSfmkZig=",
   "Source": "UMT88",
   "BasePath": "_content/UMT88",
   "Mode": "Default",
@@ -311,12 +311,12 @@
       "OriginalItemSpec": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-p2acb2c6ie.gz",
+      "Identity": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-hrsrql6tef.gz",
       "SourceId": "UMT88",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/UMT88",
-      "RelativePath": "UMT88#[.{fingerprint=p2acb2c6ie}]?.styles.css.gz",
+      "RelativePath": "UMT88#[.{fingerprint=hrsrql6tef}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -325,8 +325,8 @@
       "RelatedAsset": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\scopedcss\\bundle\\UMT88.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "iagjv793wz",
-      "Integrity": "OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=",
+      "Fingerprint": "k76wgba6zk",
+      "Integrity": "kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\scopedcss\\bundle\\UMT88.styles.css"
@@ -1214,12 +1214,12 @@
       "OriginalItemSpec": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-p2acb2c6ie.gz",
+      "Identity": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-hrsrql6tef.gz",
       "SourceId": "UMT88",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/UMT88",
-      "RelativePath": "UMT88#[.{fingerprint=p2acb2c6ie}]!.bundle.scp.css.gz",
+      "RelativePath": "UMT88#[.{fingerprint=hrsrql6tef}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -1228,8 +1228,8 @@
       "RelatedAsset": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\UMT88.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "iagjv793wz",
-      "Integrity": "OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=",
+      "Fingerprint": "k76wgba6zk",
+      "Integrity": "kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\UMT88.bundle.scp.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "p2acb2c6ie",
-      "Integrity": "/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=",
+      "Fingerprint": "hrsrql6tef",
+      "Integrity": "XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\scopedcss\\bundle\\UMT88.styles.css"
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "p2acb2c6ie",
-      "Integrity": "/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=",
+      "Fingerprint": "hrsrql6tef",
+      "Integrity": "XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\UMT88.bundle.scp.css"
@@ -21287,12 +21287,12 @@
     },
     {
       "Route": "UMT88.bundle.scp.css",
-      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-p2acb2c6ie.gz",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-hrsrql6tef.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001620745543"
+          "Quality": "0.001477104874"
         }
       ],
       "ResponseHeaders": [
@@ -21302,15 +21302,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "616"
+          "Value": "676"
         },
         {
           "Name": "ETag",
-          "Value": "\"OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=\""
+          "Value": "\"kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21330,13 +21330,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=\""
+          "Value": "W/\"XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI="
+          "Value": "sha256-XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M="
         }
       ]
     },
@@ -21351,7 +21351,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2249"
+          "Value": "3376"
         },
         {
           "Name": "Content-Type",
@@ -21359,11 +21359,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=\""
+          "Value": "\"XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21373,13 +21373,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI="
+          "Value": "sha256-XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M="
         }
       ]
     },
     {
       "Route": "UMT88.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-p2acb2c6ie.gz",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-hrsrql6tef.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21388,7 +21388,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "616"
+          "Value": "676"
         },
         {
           "Name": "Content-Type",
@@ -21396,11 +21396,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=\""
+          "Value": "\"kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21418,18 +21418,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg="
+          "Value": "sha256-kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg="
         }
       ]
     },
     {
-      "Route": "UMT88.p2acb2c6ie.bundle.scp.css",
-      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-p2acb2c6ie.gz",
+      "Route": "UMT88.hrsrql6tef.bundle.scp.css",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-hrsrql6tef.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001620745543"
+          "Quality": "0.001477104874"
         }
       ],
       "ResponseHeaders": [
@@ -21439,15 +21439,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "616"
+          "Value": "676"
         },
         {
           "Name": "ETag",
-          "Value": "\"OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=\""
+          "Value": "\"kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21467,13 +21467,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=\""
+          "Value": "W/\"XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p2acb2c6ie"
+          "Value": "hrsrql6tef"
         },
         {
           "Name": "label",
@@ -21481,12 +21481,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI="
+          "Value": "sha256-XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M="
         }
       ]
     },
     {
-      "Route": "UMT88.p2acb2c6ie.bundle.scp.css",
+      "Route": "UMT88.hrsrql6tef.bundle.scp.css",
       "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\UMT88.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21496,7 +21496,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2249"
+          "Value": "3376"
         },
         {
           "Name": "Content-Type",
@@ -21504,11 +21504,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=\""
+          "Value": "\"XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21518,7 +21518,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p2acb2c6ie"
+          "Value": "hrsrql6tef"
         },
         {
           "Name": "label",
@@ -21526,13 +21526,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI="
+          "Value": "sha256-XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M="
         }
       ]
     },
     {
-      "Route": "UMT88.p2acb2c6ie.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-p2acb2c6ie.gz",
+      "Route": "UMT88.hrsrql6tef.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\vh7zlemdj4-hrsrql6tef.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21541,7 +21541,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "616"
+          "Value": "676"
         },
         {
           "Name": "Content-Type",
@@ -21549,11 +21549,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=\""
+          "Value": "\"kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21571,7 +21571,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p2acb2c6ie"
+          "Value": "hrsrql6tef"
         },
         {
           "Name": "label",
@@ -21579,18 +21579,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg="
+          "Value": "sha256-kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg="
         }
       ]
     },
     {
-      "Route": "UMT88.p2acb2c6ie.styles.css",
-      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-p2acb2c6ie.gz",
+      "Route": "UMT88.hrsrql6tef.styles.css",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-hrsrql6tef.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001620745543"
+          "Quality": "0.001477104874"
         }
       ],
       "ResponseHeaders": [
@@ -21600,15 +21600,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "616"
+          "Value": "676"
         },
         {
           "Name": "ETag",
-          "Value": "\"OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=\""
+          "Value": "\"kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21628,13 +21628,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=\""
+          "Value": "W/\"XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p2acb2c6ie"
+          "Value": "hrsrql6tef"
         },
         {
           "Name": "label",
@@ -21642,12 +21642,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI="
+          "Value": "sha256-XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M="
         }
       ]
     },
     {
-      "Route": "UMT88.p2acb2c6ie.styles.css",
+      "Route": "UMT88.hrsrql6tef.styles.css",
       "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\scopedcss\\bundle\\UMT88.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21657,7 +21657,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2249"
+          "Value": "3376"
         },
         {
           "Name": "Content-Type",
@@ -21665,11 +21665,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=\""
+          "Value": "\"XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21679,7 +21679,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p2acb2c6ie"
+          "Value": "hrsrql6tef"
         },
         {
           "Name": "label",
@@ -21687,13 +21687,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI="
+          "Value": "sha256-XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M="
         }
       ]
     },
     {
-      "Route": "UMT88.p2acb2c6ie.styles.css.gz",
-      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-p2acb2c6ie.gz",
+      "Route": "UMT88.hrsrql6tef.styles.css.gz",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-hrsrql6tef.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21702,7 +21702,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "616"
+          "Value": "676"
         },
         {
           "Name": "Content-Type",
@@ -21710,11 +21710,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=\""
+          "Value": "\"kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21732,7 +21732,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p2acb2c6ie"
+          "Value": "hrsrql6tef"
         },
         {
           "Name": "label",
@@ -21740,18 +21740,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg="
+          "Value": "sha256-kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg="
         }
       ]
     },
     {
       "Route": "UMT88.styles.css",
-      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-p2acb2c6ie.gz",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-hrsrql6tef.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001620745543"
+          "Quality": "0.001477104874"
         }
       ],
       "ResponseHeaders": [
@@ -21761,15 +21761,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "616"
+          "Value": "676"
         },
         {
           "Name": "ETag",
-          "Value": "\"OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=\""
+          "Value": "\"kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21789,13 +21789,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=\""
+          "Value": "W/\"XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI="
+          "Value": "sha256-XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M="
         }
       ]
     },
@@ -21810,7 +21810,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2249"
+          "Value": "3376"
         },
         {
           "Name": "Content-Type",
@@ -21818,11 +21818,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI=\""
+          "Value": "\"XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21832,13 +21832,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/84z4q9KBQSQ7uT0pYVs2RNo8OBM4k3bxU8Mpo1ntxI="
+          "Value": "sha256-XTj/RqR/whAIanrBkW6Tj/eoH6J1d9M/4jhHSwpbB6M="
         }
       ]
     },
     {
       "Route": "UMT88.styles.css.gz",
-      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-p2acb2c6ie.gz",
+      "AssetFile": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\obj\\Debug\\net9.0\\compressed\\67taupmyhd-hrsrql6tef.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21847,7 +21847,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "616"
+          "Value": "676"
         },
         {
           "Name": "Content-Type",
@@ -21855,11 +21855,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg=\""
+          "Value": "\"kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 09:28:13 GMT"
+          "Value": "Sat, 05 Jul 2025 18:16:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21877,7 +21877,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OiSRt6dxtwsfBN+e7llOWY10z3v9l8iAVMzLjLfqPtg="
+          "Value": "sha256-kNzavKFVgcq5TnioBKvhCCxSE04ioSrZ79bpyN3F/gg="
         }
       ]
     }

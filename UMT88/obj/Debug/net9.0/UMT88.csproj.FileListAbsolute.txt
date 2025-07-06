@@ -229,6 +229,7 @@ C:\Users\lenovo\source\repos\UMT88Solution\UMT88\bin\Debug\net9.0\runtimes\win\l
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\UMT88.csproj.Up2Date
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\scopedcss\Views\Shared\_ViewStart.cshtml.rz.scp.css
-C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\compressed\67taupmyhd-p2acb2c6ie.gz
-C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\compressed\vh7zlemdj4-p2acb2c6ie.gz
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\scopedcss\Views\Shared\_UserLayout.cshtml.rz.scp.css
+C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\compressed\67taupmyhd-hrsrql6tef.gz
+C:\Users\lenovo\source\repos\UMT88Solution\UMT88\obj\Debug\net9.0\compressed\vh7zlemdj4-hrsrql6tef.gz

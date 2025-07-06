@@ -32,6 +32,8 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Match> Matches { get; set; }
 
+    public virtual DbSet<MatchEvent> MatchEvents { get; set; }
+
     public virtual DbSet<Match_Result> Match_Results { get; set; }
 
     public virtual DbSet<Odd> Odds { get; set; }
@@ -227,6 +229,29 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.season_id)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Match_Season");
+        });
+
+        modelBuilder.Entity<MatchEvent>(entity =>
+        {
+            entity.HasKey(e => e.event_id).HasName("PK__MatchEve__2370F7277AF1FE12");
+
+            entity.ToTable("MatchEvent");
+
+            entity.Property(e => e.created_at).HasDefaultValueSql("(sysutcdatetime())");
+            entity.Property(e => e.description).HasMaxLength(255);
+            entity.Property(e => e.event_type)
+                .HasMaxLength(20)
+                .IsUnicode(false);
+
+            entity.HasOne(d => d.match).WithMany(p => p.MatchEvents)
+                .HasForeignKey(d => d.match_id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_MatchEvent_Match");
+
+            entity.HasOne(d => d.team).WithMany(p => p.MatchEvents)
+                .HasForeignKey(d => d.team_id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_MatchEvent_Team");
         });
 
         modelBuilder.Entity<Match_Result>(entity =>

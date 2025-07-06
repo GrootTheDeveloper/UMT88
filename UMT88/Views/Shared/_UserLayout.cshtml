@@ -1,0 +1,62 @@
+﻿@*
+  Layout chuyên cho user/bettor: giữ phần <html>, <head>, header chung và @RenderBody()
+*@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@ViewData["Title"] - UMT88</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-black font-sans">
+
+    @* ---------- HEADER (giống bạn gửi) ---------- *@
+    <header class="flex items-center justify-between px-4 py-2 border-b border-gray-200">
+        <div class="flex items-center space-x-6 text-sm font-normal">
+            <span class="font-bold text-red-600">UMT<span class="font-normal">88</span></span>
+
+            <a asp-controller="Home" asp-action="Index" class="flex items-center space-x-1 hover:underline">
+                <i class="fas fa-home text-xs"></i><span>Trang chủ</span>
+            </a>
+            <a asp-controller="UserDashboard" asp-action="Index"
+               class="flex items-center space-x-1 border-b-2 border-black pb-1 font-semibold">
+                <i class="fas fa-ticket-alt text-xs"></i><span>Cá cược</span>
+            </a>
+            <a asp-controller="Wallet" asp-action="Index" class="flex items-center space-x-1 hover:underline">
+                <i class="fas fa-wallet text-xs"></i><span>Nạp tiền</span>
+            </a>
+            <a asp-controller="UserDashboard" asp-action="Index" class="flex items-center space-x-1 hover:underline">
+                <i class="fas fa-user-circle text-xs"></i><span>Tài khoản</span>
+            </a>
+            <a class="flex items-center space-x-1 hover:underline">
+                <i class="fas fa-question-circle text-xs"></i><span>Trợ giúp</span>
+            </a>
+        </div>
+
+        <form asp-controller="Auth" asp-action="Logout" method="post" class="inline">
+            @Html.AntiForgeryToken()
+            <button type="submit"
+                    class="text-red-600 border border-red-500 px-2 py-1 rounded text-[10px] hover:bg-red-50">
+                Đăng xuất
+            </button>
+        </form>
+        @* Khối user info sẽ do view con truyền vào ViewData *@
+        <div class="flex items-center space-x-3 text-right text-xs text-indigo-700 font-semibold">
+            <div>
+                <div>@ViewData["UserName"]</div>
+                <div class="text-gray-400 text-[10px] font-normal">@ViewData["Balance"] xu UMT</div>
+            </div>
+            <img class="w-8 h-8 rounded-full"
+                 src="https://storage.googleapis.com/a1aa/image/e2bce4e9-61c3-421e-394f-d3af3220eaa7.jpg"
+                 alt="Avatar" />
+        </div>
+    </header>
+
+    @RenderBody()
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
