@@ -46,6 +46,12 @@ app.UseAuthorization();
 
 // 7. Map routes
 app.MapStaticAssets();
+
+app.MapControllerRoute(
+    name: "admin",
+    pattern: "admin/{action=Index}/{id?}",
+    defaults: new { controller = "AdminDashboard" });
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")

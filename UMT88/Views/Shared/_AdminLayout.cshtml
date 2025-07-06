@@ -1,0 +1,36 @@
+﻿@* Views/Shared/_AdminLayout.cshtml *@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="bg-gray-50 min-h-screen text-gray-800">
+    <header class="bg-white shadow-md p-4 flex items-center justify-between text-gray-800">
+        <h1 class="text-2xl font-semibold flex items-center gap-3">
+            <i class="fas fa-tachometer-alt text-indigo-600"></i> Admin Page
+        </h1>
+        <nav class="space-x-6 text-sm font-medium">
+            <a asp-action="Index" asp-controller="AdminDashboard" class="text-indigo-600">Dashboard</a>
+            <a asp-controller="Users">Người dùng</a>
+            <a asp-controller="Matches">Đặt cược</a>
+            <a asp-controller="Reports">Báo cáo</a>
+            <form asp-controller="Auth" asp-action="Logout" method="post" class="inline ml-3">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="inline-flex items-center gap-1 text-red-600 hover:underline text-sm font-medium">
+                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                </button>
+            </form>
+        </nav>
+    </header>
+
+    <main class="p-6 max-w-7xl mx-auto">
+        @RenderBody()
+    </main>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
