@@ -4,8 +4,8 @@
 Hệ thống mô phỏng cá cược bóng đá bằng điểm ảo, được phát triển trong khuôn khổ môn học Introduce to Software Engineering tại Đại học UMT.
 
 Người dùng có thể:
-- Đặt cược vào các trận bóng đá thật
-- Theo dõi kết quả và điểm thưởng
+- Đặt cược vào các trận bóng đá 
+- Theo dõi kết quả và tiền cược
 - Xem bảng xếp hạng và thống kê cá nhân
 - ...
 
@@ -18,8 +18,8 @@ Người dùng có thể:
 - [x] Xem danh sách trận đấu & tỷ lệ cược
 - [x] Đặt cược điểm ảo trước giờ bóng lăn
 - [x] Tự động cập nhật kết quả & tính thắng/thua
-- [x] Xem lịch sử cược, thống kê cá nhân, bảng xếp hạng
-- [x] Giao diện quản trị: hủy cược bất thường, theo dõi log, xuất báo cáo
+- [x] Xem lịch sử cược
+- [x] Giao diện quản trị: hủy cược bất thường, quản lý trận đấu, xuất báo cáo...
 
 ---
 
@@ -27,11 +27,11 @@ Người dùng có thể:
 
 | Họ tên                 | Vai trò                         |
 |------------------------|----------------------------------|
-| **Đặng Phúc An Khang** | Leader – Quản lý dự án, Database, Backend | 
-| Nguyễn Lương Nghĩa     | UI/UX Designer, Frontend |
-| Trần Lê Gia Huy        | Documentation - UML & báo cáo |
-| Ngô Hoàng Tùng         | Database, Backend |
-| Vũ Văn Đạt             | FrontEnd |
+| **Đặng Phúc An Khang** | Leader – Quản lý dự án, Database, Frontend, Backend, Documentation | 
+| Nguyễn Lương Nghĩa     | UI/UX Designer, Frontend, Documentation |
+| Trần Lê Gia Huy        | UI/UX Designer, Documentation |
+| Ngô Hoàng Tùng         | Documentation |
+| Vũ Văn Đạt             | Documentation |
 
 ---
 
