@@ -1,0 +1,26 @@
+﻿@model UMT88.ViewModels.ReportFilterVm
+@{
+    Layout = "_AdminLayout";   // nằm ở Views/Shared
+    ViewData["Title"] = "Báo cáo";
+}
+
+<h2 class="text-xl font-bold mb-4">Xuất báo cáo PDF</h2>
+
+<form asp-action="Preview" method="post" class="flex gap-4 items-end">
+    <div>
+        <label class="block text-xs">Từ ngày</label>
+        <input type="date" name="From" class="border rounded px-2 py-1" />
+    </div>
+    <div>
+        <label class="block text-xs">Đến ngày</label>
+        <input type="date" name="To" class="border rounded px-2 py-1" />
+    </div>
+
+    <button class="bg-blue-600 text-white px-4 py-1 rounded">Xem trước</button>
+
+    <button formaction="@(Url.Action("ExportPdf","Report",new{},Context.Request.Scheme))"
+            formmethod="post"
+            class="bg-green-600 text-white px-4 py-1 rounded">
+        Xuất PDF
+    </button>
+</form>

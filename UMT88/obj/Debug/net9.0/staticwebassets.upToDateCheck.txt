@@ -23,7 +23,6 @@ C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\bootstrap\dist\css\
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
-C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\js\site.js
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
 C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\jquery\dist\jquery.slim.js
@@ -63,7 +62,6 @@ C:\Users\lenovo\source\repos\UMT88Solution\UMT88\wwwroot\lib\jquery-validation\d
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\mock-qr.png
-wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

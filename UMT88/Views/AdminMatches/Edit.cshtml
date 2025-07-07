@@ -1,0 +1,60 @@
+﻿@model UMT88.ViewModels.AdminMatches.MatchEditVm
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Quản lý kèo";
+}
+<section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-xl font-bold mb-4">
+        @Model.HomeTeam vs @Model.AwayTeam <span class="text-sm text-gray-500">(@Model.StartTime)</span>
+    </h2>
+
+    <form asp-action="AddMarket" method="post" class="mb-6 flex gap-3 items-end">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="matchId" value="@Model.MatchId" />
+        <select name="type" class="border rounded px-3 py-1 text-sm">
+            <option value="AH">Asian Handicap (AH)</option>
+            <option value="OU">Over/Under (OU)</option>
+        </select>
+        <button class="bg-blue-600 text-white text-xs font-semibold rounded px-4 py-1">+ Thêm kèo</button>
+    </form>
+
+    @foreach (var k in Model.Markets)
+    {
+        <div class="border rounded mb-6 p-4">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="font-semibold text-sm">@k.Type</h3>
+                <form asp-action="ToggleMarket" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="marketId" value="@k.MarketId" />
+                    <button class="text-xs underline">
+                        @(k.Status == "open" ? "Đóng kèo" : "Mở kèo")
+                    </button>
+                </form>
+            </div>
+
+            <form asp-action="SaveMarket" method="post" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                @Html.AntiForgeryToken()
+
+                <div class="space-y-1">
+                    <input type="hidden" name="sel1Id" value="@k.Sel1Id" />
+                    <label>Cửa 1</label>
+                    <input name="sel1Name" class="border rounded w-full px-2 py-1" value="@k.Sel1" />
+                    <label>Odds</label>
+                    <input name="odds1" type="number" step="0.01" class="border rounded w-full px-2 py-1" value="@k.Odds1" />
+                </div>
+
+                <div class="space-y-1">
+                    <input type="hidden" name="sel2Id" value="@k.Sel2Id" />
+                    <label>Cửa 2</label>
+                    <input name="sel2Name" class="border rounded w-full px-2 py-1" value="@k.Sel2" />
+                    <label>Odds</label>
+                    <input name="odds2" type="number" step="0.01" class="border rounded w-full px-2 py-1" value="@k.Odds2" />
+                </div>
+
+                <div class="sm:col-span-2 text-right">
+                    <button class="bg-green-600 text-white text-xs font-semibold rounded px-4 py-1">Lưu</button>
+                </div>
+            </form>
+        </div>
+    }
+</section>

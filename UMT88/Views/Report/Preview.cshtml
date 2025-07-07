@@ -1,0 +1,42 @@
+﻿@model UMT88.ViewModels.ReportSummaryVm
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Xem trước báo cáo";
+}
+
+<h2 class="text-xl font-bold mb-4">Xem trước</h2>
+
+<table class="text-sm border my-4">
+    <tr>
+        <td class="p-2">Tổng stake</td>
+        <td class="p-2 font-semibold">@Model.TotalStake.ToString("N0") xu</td>
+    </tr>
+    <tr>
+        <td class="p-2">Tổng payout</td>
+        <td class="p-2 font-semibold">@Model.TotalPayout.ToString("N0") xu</td>
+    </tr>
+    <tr>
+        <td class="p-2">% lợi nhuận</td>
+        <td class="p-2 font-semibold">@Model.ProfitPercent.ToString("F2")&nbsp;%</td>
+    </tr>
+</table>
+
+<h3 class="font-semibold mt-6 mb-2">Top 10 trận theo volume</h3>
+<ul class="text-sm list-disc pl-5">
+    @foreach (var m in Model.TopMatches)
+    {
+        <li>@m.Match – @m.Volume.ToString("N0") xu</li>
+    }
+</ul>
+
+<h3 class="font-semibold mt-6 mb-2">Top 10 người chơi thắng lớn</h3>
+<ul class="text-sm list-disc pl-5">
+    @foreach (var u in Model.TopUsers)
+    {
+        <li>@u.User – @u.Won.ToString("N0") xu</li>
+    }
+</ul>
+
+<a onclick="history.back()" class="mt-4 inline-block underline text-blue-600 cursor-pointer">
+    &larr; Quay lại bộ lọc
+</a>

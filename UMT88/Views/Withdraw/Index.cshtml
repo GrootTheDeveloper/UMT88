@@ -1,0 +1,82 @@
+﻿@model List<UMT88.ViewModels.WithdrawRowVm>
+
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Quản lý rút tiền";
+}
+
+<h2 class="text-xl font-bold mb-4">Yêu cầu rút tiền</h2>
+
+@if (TempData["Toast"] != null)
+{
+    <div class="bg-green-100 text-green-800 p-2 mb-4 rounded">
+        @TempData["Toast"]
+    </div>
+}
+
+<table class="min-w-full text-sm border border-gray-300">
+    <thead class="bg-gray-50">
+        <tr>
+            <th class="p-2 border">ID</th>
+            <th class="p-2 border">User</th>
+            <th class="p-2 border">Số&nbsp;xu</th>
+            <th class="p-2 border">Ngân&nbsp;hàng</th>
+            <th class="p-2 border">Ngày&nbsp;yêu&nbsp;cầu</th>
+            <th class="p-2 border">Trạng&nbsp;thái</th>
+            <th class="p-2 border">Hành&nbsp;động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr class="hover:bg-gray-100">
+                <td class="p-2 border">@r.Id</td>
+                <td class="p-2 border">@r.User</td>
+                <td class="p-2 border">@r.Amount</td>
+                <td class="p-2 border">@r.BankInfo</td>
+                <td class="p-2 border">@r.RequestedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                <td class="p-2 border">
+                    <span class="
+                        px-2 py-0.5 rounded-full text-xs font-semibold
+                        @(r.Status == "approved" ? "bg-green-100 text-green-800" :
+                          r.Status == "rejected" ? "bg-red-100 text-red-800" :
+                          "bg-yellow-100 text-yellow-800")">
+                        @r.Status
+                    </span>
+                </td>
+                <td class="p-2 border">
+                    @if (r.Status == "pending")
+                    {
+                        <form asp-action="Approve"
+                              asp-area="Admin"
+                              asp-controller="Withdraw"
+                              method="post"
+                              class="inline">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@r.Id" />
+                            <button type="submit" class="text-green-600 text-xs underline">
+                                Duyệt
+                            </button>
+                        </form>
+                        <text> | </text>
+                        <form asp-action="Reject"
+                              asp-area="Admin"
+                              asp-controller="Withdraw"
+                              method="post"
+                              class="inline">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@r.Id" />
+                            <button type="submit" class="text-red-600 text-xs underline">
+                                Huỷ
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-gray-400 text-xs">—</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

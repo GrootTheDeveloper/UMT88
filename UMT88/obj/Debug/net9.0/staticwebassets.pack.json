@@ -17,10 +17,6 @@
       "PackagePath": "staticwebassets\\images\\mock-qr.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
-    },
-    {
       "Id": "C:\\Users\\lenovo\\source\\repos\\UMT88Solution\\UMT88\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

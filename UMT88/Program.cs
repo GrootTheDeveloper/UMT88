@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UMT88.Data;  // namespace AppDbContext
+using QuestPDF;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,8 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.IdleTimeout = TimeSpan.FromMinutes(30);
 });
-
+// Cấu hình giấy phép QuestPDF
+QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
 // Handicap
 builder.Services.AddHostedService<HandicapJob>();
 

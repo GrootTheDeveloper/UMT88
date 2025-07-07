@@ -16,8 +16,11 @@
         <nav class="space-x-6 text-sm font-medium">
             <a asp-action="Index" asp-controller="AdminDashboard" class="text-indigo-600">Dashboard</a>
             <a asp-controller="AdminUsers">Người dùng</a>
-            <a asp-controller="Matches">Đặt cược</a>
-            <a asp-controller="Reports">Báo cáo</a>
+            <a asp-controller="AdminMatches">Đặt cược</a>
+            <a asp-controller="Withdraw">Rút tiền</a>
+            <a asp-controller="Report" asp-action="Index"
+               class="hover:text-indigo-600 transition">Báo cáo</a>
+
             <form asp-controller="Auth" asp-action="Logout" method="post" class="inline ml-3">
                 @Html.AntiForgeryToken()
                 <button type="submit" class="inline-flex items-center gap-1 text-red-600 hover:underline text-sm font-medium">

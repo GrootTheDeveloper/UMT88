@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using UMT88.Data;
 using UMT88.ViewModels;
+namespace UMT88.Controllers;
 
 public class AdminDashboardController : Controller
 {

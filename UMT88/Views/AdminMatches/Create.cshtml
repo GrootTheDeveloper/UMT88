@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Thêm trận";
+}
+<section class="p-6 max-w-md mx-auto">
+    <h2 class="text-xl font-bold mb-4">Thêm trận đấu</h2>
+    <form asp-action="Create" method="post" class="space-y-4 text-sm">
+        @Html.AntiForgeryToken()
+        <!-- TODO: dropdown Season, HomeTeam, AwayTeam -->
+        <label>Season ID <input name="seasonId" class="border rounded w-full px-2 py-1" required /></label>
+        <label>Home team ID <input name="homeId" class="border rounded w-full px-2 py-1" required /></label>
+        <label>Away team ID <input name="awayId" class="border rounded w-full px-2 py-1" required /></label>
+        <label>Start Time <input name="startTime" type="datetime-local" class="border rounded w-full px-2 py-1" required /></label>
+        <button class="bg-blue-600 text-white text-xs font-semibold rounded px-4 py-2">Lưu</button>
+    </form>
+</section>
